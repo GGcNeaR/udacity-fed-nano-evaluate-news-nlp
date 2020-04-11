@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+    height: 180px;
+    background-image: url(./../img/background.jpg);
+
+    h1 {
+        color: #fff;
+        background-color: #0005;
+        text-align: center;
+        font-size: 3.8em;
+    }
+}

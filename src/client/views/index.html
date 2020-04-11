@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate News - NLP</title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Evaluate News - NLP</h1>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return event.preventDefault()">
+                    <input id="url" type="url" name="input" value="" placeholder="Url">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <h2>Form Results:</h2>
+                <div id="results">
+                    <div>
+                        <label for="polarity">Polarity</label>
+                        <input type="text" name="polarity" id="polarity" disabled>
+                    </div>
+                    <div>
+                        <label for="polarity_confidence">Polarity Confidence</label>
+                        <input type="text" name="polarity_confidence" id="polarity_confidence" disabled>
+                    </div>
+                    <div>
+                        <label for="subjectivity">Subjectivity</label>
+                        <input type="text" name="subjectivity" id="subjectivity" disabled>
+                    </div>
+                    <div>
+                        <label for="subjectivity_confidence">Subjectivity Confidence</label>
+                        <input type="text" name="subjectivity_confidence" id="subjectivity_confidence" disabled>
+                    </div>
+                    <div>
+                        <label for="excerpt">Excerpt</label>
+                        <textarea name="excerpt" id="excerpt" rows="7" disabled></textarea>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Project by Borislav Borisov for Udacity FED Nanodegree</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
